@@ -1,0 +1,150 @@
+/********** RESET **********/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+ }
+
+* {
+  margin: 0;
+  padding: 0; }
+
+a {
+  color: #a12012;
+  text-decoration: none;
+  cursor: pointer; }
+
+a:hover {
+  text-decoration: none; }
+
+ul, li {
+  list-style-type: none; }
+
+/*****html*****/
+
+html {
+	font-family: 'Lato', sans-serif, 'Josefin Slab', serif;
+}
+
+/*****body*****/
+
+body {
+	background-color: #666666;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+#container {
+	width: 90%;
+	margin: 0 auto;
+	background-color: #ffffff;
+	background: rgba(255, 255, 255, 0.95);
+}
+
+#container #subcontainer {
+	padding: 0 25px;
+}
+
+#container #temp {
+	width: 100%;
+	margin: 100px auto 0;
+	padding: 25px 0;
+	border-bottom: 1px solid #aaaaaa;
+}
+
+#container #temp img{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+#container #temp span{
+	display: inline-block;
+	padding: 4px 25px 5px;
+	font-size: 33px;
+	line-height: 33px;
+	vertical-align: middle;
+	font-family: 'Josefin Slab', serif;
+	font-weight: 600;
+	color: #333333;
+}
+
+#container #bottom {
+	width: 100%;
+	margin: 0 auto;
+	padding: 25px 0;
+	font-size: 50px;
+	font-weight: 100;
+	line-height: 50px;
+	color: #333333;
+	letter-spacing: -4px;
+}
+
+#container #bottom b{
+	font-weight: 700;
+}
+
+.bar {
+      fill: steelblue;
+}
+
+.bar:hover {
+      fill: brown;
+}
+
+.axis {
+      font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+      display: none;
+}
+
+@media all and (min-width: 0px) and (max-width: 899px) {
+	#container {
+		width: 80%;
+	}
+}
+
+@media all and (min-width: 0px) and (max-width: 559px) {
+
+#container #temp {
+	padding-bottom: 0;
+	border: 0px;
+}
+
+#container #temp img{
+	display: inline-block;
+}
+
+#container #temp span{
+	font-size: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+#container #bottom {
+	font-size: 25px;
+	line-height: 25px;
+	letter-spacing: -2px;
+}
+
+}
