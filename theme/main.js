@@ -24,7 +24,7 @@ var svg = d3.select("body").append("svg")
             .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 
-d3.csv("./data/crime.csv", type, function(error, data){
+d3.csv("data/crime.csv", type, function(error, data){
         x.domain(data.map(function(d) {return d.District;}));
         y.domain([0, d3.max(data, function(d) {return d.FRAUD})]);
         svg.append("g")
