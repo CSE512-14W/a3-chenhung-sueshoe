@@ -14,10 +14,8 @@ $(".area").hover(function(){
     $(districtcode).css("opacity", 1);
     $("#seattlemap").find(districtcode).css("stroke-width", "2px");
     $("#localdistrict").html(districtname);
-    $("#controlpanel").find(".Median").hide();
-    $("#controlpanel").find(districtcode).show();
     var val = findvalue(districtname);
-    //console.log(val);
+    console.log(val);
 }, function(){
     var districtname = $(this).attr("district");
     var districtcode = "." + districtname;
@@ -25,8 +23,6 @@ $(".area").hover(function(){
     $("#seattlemap").find(districtcode).css("opacity", 0.5);
     $("#seattlemap").find(districtcode).css("stroke-width", "0.5px");
     $("#localdistrict").html("Median");
-    $("#controlpanel").find(districtcode).hide();
-    $("#controlpanel").find(".Median").show();
 });
 
 function findvalue(districtname){

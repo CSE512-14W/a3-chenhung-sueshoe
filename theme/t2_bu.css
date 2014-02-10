@@ -114,12 +114,7 @@ display: block;
     width: 310px;
 }
 
-.bars {
-display: none;
-}
-
 .bars.Median {
 opacity: 1;
-display: block;
 }
 

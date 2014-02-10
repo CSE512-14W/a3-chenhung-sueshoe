@@ -120,26 +120,55 @@ d3.csv("./data/crime.csv", function(crime) {
         d.crimes.pop();
         d.total = d.crimes[d.crimes.length - 1].x1;
         xb[d.District] = wb/d.total;
-        console.log(d);
+        //console.log(d);
     });
-    console.log(xb);
+    //console.log(xb);
 //    xb.domain([0, d3.max(crime, function(d){return d.total;})]);
-    yb.domain(crime.map(function(d){return d["District"];}));
-    
+//    yb.domain(crime.map(function(d){return d["District"];}));
+/* 
     var state = svgb.selectAll(".state")
         .data(crime)
         .enter().append("g")
         .attr("class", "g")
         .attr("transform", function(d) { return "translate( 0, " + yb(d["District"]) + ")"; });
-/*
+*/
+    var state = svgb.selectAll(".state")
+        .data(crime)
+        .enter().append("g")
+        .attr("class", "g");
+
     state.selectAll("rect")
         .data(function(d) { return d.crimes; })
         .enter().append("rect")
-        .attr("height", yb.rangeBand())
-        .attr("x", function(d) { return xb(d.x0); })
-        .attr("width", function(d) { return xb(d.x1) - xb(d.x0); })
-        .style("fill", function(d) { return colorb(d.name); });
-*/
+        .attr("height", hb)
+        .attr("x", function(d) { return d.x0*xb[d.District]; })
+        .attr("width", function(d) { return (d.x1 - d.x0)*xb[d.District]; })
+        .style("fill", function(d) { return colorb(d.name); })
+        .attr("class", function(d) { return "bars " + d.District; });
+
+        /*
+        .append("svg:text")
+        .attr("x", function(d) { return d.x0*xb[d.District]; })
+        .style("fill", "black")
+        .attr("class", "label")
+        .attr("text-anchor", "left")
+        .attr("transform", "rotate(-30)")
+        .attr("font", "12px")
+        .text(String);
+        */
+/*
+  // Add an and title.
+  g.append("svg:g")
+      .attr("class", "axis")
+      .each(dimensions)
+    .append("svg:text")
+      .attr("class", "label")
+      .attr("text-anchor", "left")
+      .attr("y", -50)
+      .attr("transform", "rotate(-30)")
+      .text(String);
+      */
+/*
     state.selectAll("rect")
         .data(function(d) { return d.crimes; })
         .enter().append("rect")
@@ -148,6 +177,7 @@ d3.csv("./data/crime.csv", function(crime) {
         .attr("width", function(d) { return (d.x1 - d.x0)*xb[d.District]; })
         .style("fill", function(d) { return colorb(d.name); })
         .attr("class", function(d) { return "area bars " + d.District; });
+*/
 
 //console.log(crimeclone);
 });
