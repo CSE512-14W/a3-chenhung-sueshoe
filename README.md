@@ -13,7 +13,7 @@ The neighborhoods on the map are colored lighter as the number of total crime in
 We used the Seattle Police Department Police Report Incident dataset (https://data.seattle.gov/Public-Safety/Seattle-Police-Department-Police-Report-Incident/7ais-f98f), filtered down to only include incidents between January 1, 2010 and December 31, 2013 and to only include values from the columns “Summarized Offense Description”, “Occurred Date or Date Range Start”, “District/Sector”, “Longitude” and “Latitude”. We further filtered the dataset down to 13 of most common types of crime incidents. For the map, we used an svg map of Seattle neighborhoods, and mapped the “District/Sector” data to the neighborhoods they fell in. 
 
 ##Running Instructions
-Our visualiation can be accessed by following this link: _____ The visualiation works best in Mozilla Firefox. 
+Our visualiation can be accessed by following this link: http://cse512-14w.github.io/a3-chenhung-sueshoe/ The visualiation works best in Mozilla Firefox. 
 
 
 ##Storyboard 
