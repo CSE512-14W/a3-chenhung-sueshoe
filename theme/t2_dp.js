@@ -30,10 +30,12 @@ var svg = d3.select("#leftcolumn").append("svg:svg")
     .attr("class", "maindisplay")
   .append("svg:g")
     .attr("transform", "translate(" + m[3] + "," + m[0] + ")");
-
+var colorb = d3.scale.ordinal()
+        .range(["#333333", "#8c3333", "8c5c33"]);
+/*
 var colorb = d3.scale.ordinal()
         .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
-
+*/
 var svgb = d3.select("#controlpanel").append("svg")
                 .attr("width", wb + mb[3] + mb[1])
                 .attr("height", hb + mb[2] + mb[0])
