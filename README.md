@@ -21,14 +21,13 @@ We wanted to convey all the different dimensions of crime incident data in a com
 (add image) 
 
 ###Changes Between Storyboard and Implementation
-In the final implementation we chose to use a parallel coordinates overlapping area chart because _____. Because the scale of each axes is different, we decided to add a stacked bar to aid in comparing the different types of crime within a single neighborhood. 
+In the final implementation we chose to use a parallel coordinates overlapping area chart because the parallel coordinates diagram is too difficult for viewer to differentiate the lines between different districts. Because the scale of each axes is different, we decided to add a stacked bar to aid in comparing the different types of crime within a single neighborhood. 
 
 
 ##Development Process
 Division of work: 
 We used code from http://bl.ocks.org/jasondavies/1341281 as the intial template for how to read in the data and map it to a parallel coordinates diagram. We worked together to develop the intial parallel coordinates diagram.  Chase then did the development for the map, stacked bar, and the front end development, including the styles and interactions between visualizations. 
 
-We spent about ____ hours developing the visualizations, 
+We spent about 25 hours developing the visualizations, 
 
 What took the most time?:
-
