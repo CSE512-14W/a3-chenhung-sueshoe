@@ -118,7 +118,8 @@ d3.csv("./data/crime.csv", function(crime) {
     colorb.domain(d3.keys(crime[0]).filter(function(key) { return key !== "District"; }));
     crime.forEach(function(d){
         var x0 = 0;
-        d.crimes = colorb.domain().map(function(name) { return {name: name, x0: x0, x1: x0 += +d[name], District: d.District}; });
+        var y0 = 0;
+        d.crimes = colorb.domain().map(function(name) { return {name: name, x0: x0, x1: x0 += +d[name], District: d.District, y0: y0, y1: y0+= +1}; });
         d.crimes.pop();
         d.total = d.crimes[d.crimes.length - 1].x1;
         xb[d.District] = wb/d.total;
@@ -148,16 +149,27 @@ d3.csv("./data/crime.csv", function(crime) {
         .style("fill", function(d) { return colorb(d.name); })
         .attr("class", function(d) { return "bars " + d.District; });
 
-        /*
-        .append("svg:text")
+    state.selectAll("text")
+        .data(function(d) { return d.crimes; })
+        .enter().append("text")
         .attr("x", function(d) { return d.x0*xb[d.District]; })
+        .attr("y", function(d) {return d.y1*hb/13;})
+        .style("fill", "#fff")
+        .attr("class", function(d) { return "label bars " + d.District; })
+        .attr("text-anchor", "left")
+        .attr("font", "8px")
+        .text(function(d){console.log(d); return '-'+d.name;});
+/*
+    state.append("svg:text")
+        .attr("x", function(d) { console.log(d);return d.x0*xb[d.District]; })
         .style("fill", "black")
         .attr("class", "label")
         .attr("text-anchor", "left")
         .attr("transform", "rotate(-30)")
         .attr("font", "12px")
-        .text(String);
-        */
+        .text("12");
+*/
+
 /*
   // Add an and title.
   g.append("svg:g")

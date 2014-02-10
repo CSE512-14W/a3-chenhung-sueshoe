@@ -123,3 +123,6 @@ opacity: 1;
 display: block;
 }
 
+text.bars {
+    font-size: 8px;
+}
