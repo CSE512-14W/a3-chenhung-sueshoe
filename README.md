@@ -20,7 +20,7 @@ We wanted to convey all the different dimensions of crime incident data in a com
 View the storyboard here: http://cse512-14w.github.io/a3-chenhung-sueshoe/storyboard.png
 
 ###Changes Between Storyboard and Implementation
-In the final implementation we chose to use a parallel coordinates overlapping area chart because the parallel coordinates diagram is too difficult for viewer to differentiate the lines between different districts. Because the scale of each axes is different, we decided to add a stacked bar to aid in comparing the different types of crime within a single neighborhood. 
+In the final implementation we chose to use a parallel coordinates overlapping area chart because the lines in the parallel coordinates diagram were difficult to differentiate. Because the scale of each axes is different, we decided to add a stacked bar to aid in comparing the different types of crime within a single neighborhood. 
 
 
 ##Development Process
