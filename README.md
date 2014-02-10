@@ -5,36 +5,30 @@ a3-chenhung-sueshoe
 1. Chase Wu chenhung@uw.edu
 2. Susanne Hsu sueshoe@uw.edu
 
-##CSE 512 Assignment 3 | Creating Interactive Visualization Software
+##Crime Rates in Seattle By Neighborhood 2010-13
+We created three linked visualizations that compare crime rates for 13 of the most common crimes across neighborhoods in Seattle. Viewers explore the visualizations by mousing over a neighborhood in the map. In the parallel coordinates overlapping area chart, the area corresponding to the selected neighborhood will highlight, showing the total number of incidents for various types of crime. This can be compared to the median, represented by the black line.  The horizontal stacked bar above the area chart shows the ratios of the different types of crime for the selected neighborhood. 
 
-##Exploration and Planning 
-We began by looking at data.seattle.gov, data.gov, and APIs (yelp.com) for interesting datasets--primarily ones with a location dimension. We considered numerous different datasets with a location dimension--parking ticket data, rental rates, vehicle accidents, restaurants-- and evaluated how each one would benefit from interactivity. Our goal was to find a dataset that held interesting patterns that could be revealed through the interactions that we would build. 
+The neighborhoods on the map are colored lighter as the number of total crime incidents increases. The colors in the stacked bar chart are used to differentiate the segments. We felt a darker color scheme was appropriate for the data subject matter. 
 
-We initially settled on plotting bike theft data on a map of Seattle and letting the user filter the data by hour, day of the week, month, and year.  However, after exploring the data in Tableau, we decided to expand our dataset to create a visualization that would convey more to the viewer. We expanded the dataset to look at multiple types of crime in Seattle and storyboarded a visualization that would allow viewers to compare rates of crime across neighborhoods.  
+We used the Seattle Police Department Police Report Incident dataset (https://data.seattle.gov/Public-Safety/Seattle-Police-Department-Police-Report-Incident/7ais-f98f), filtered down to only include incidents between January 1, 2010 and December 31, 2013 and to only include values from the columns “Summarized Offense Description”, “Occurred Date or Date Range Start”, “District/Sector”, “Longitude” and “Latitude”. We further filtered the dataset down to 13 of most common types of crime incidents. For the map, we used an svg map of Seattle neighborhoods, and mapped the “District/Sector” data to the neighborhoods they fell in. 
+
+##Running Instructions
+Our visualiation can be accessed by following this link: _____ The visualiation works best in Mozilla Firefox. 
+
 
 ##Storyboard 
 We wanted to convey all the different dimensions of crime incident data in a compact visualization and allow quick comparison between neighborhoods, so we choose to plot it onto a parallel coordinates diagram, where the vertical axes represented different types of crime, and each line represented a neighborhood.  We wanted the graph to be linked to a map so that the lines were tied to the neighborhood they represented, and both would highlight if either was moused-over. 
- 
-##Data
-We used the Seattle Police Department Police Report Incident dataset, filtered down to only include incidents between January 1, 2010 and December 31, 2013 and to only include values from the columns “Summarized Offense Description”, “Occurred Date or Date Range Start”, “District/Sector”, “Longitude” and “Latitude”. We further filtered the dataset down to 13 of most common types of crime incidents, which returned a total of 49,999 records.  We removed 177 records which had “null”, “blank”, or “99” as their “District/Sector” value.  For the map, we used an svg map of Seattle neighborhoods, and mapped the “District/Sector” data to the neighborhoods they fell in. 
+(add image) 
 
-Visualization and Design 
-In the final implementation we chose to use an area chart to represent each of the neighborhoods because…
-Viewesr can 
-_color - dark grey, red-orange: related to crime
-_position - map on the right as control panel and reference of actual area, while the charts on the left change.
-_charts
-	_overlapping area chart - comparing different areas’ crime report amount.
-	_stacked bar chart - ratio of different types of crime in a single area.
+###Changes Between Storyboard and Implementation
+In the final implementation we chose to use a parallel coordinates overlapping area chart because _____. Because the scale of each axes is different, we decided to add a stacked bar to aid in comparing the different types of crime within a single neighborhood. 
 
--explanation of changes between the storyboard and the final implementation
 
-Development Process
--used code from http://bl.ocks.org/jasondavies/1341281 as the intial template for how to read the data and map to the visual form
+##Development Process
+Division of work: 
+We used code from http://bl.ocks.org/jasondavies/1341281 as the intial template for how to read in the data and map it to a parallel coordinates diagram. We worked together to develop the intial parallel coordinates diagram.  Chase then did the development for the map, stacked bar, and the front end development, including the styles and interactions between visualizations. 
 
-Split of work:
-
-How much time did you spend developing?:
+We spent about ____ hours developing the visualizations, 
 
 What took the most time?:
 
