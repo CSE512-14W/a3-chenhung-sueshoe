@@ -95,7 +95,7 @@ d3.csv("./data/crime.csv", function(crime) {
   // Add an axis and title.
   g.append("svg:g")
       .attr("class", "axis")
-      .each(function(d) { var tem = d3.select(this).call(axis.scale(y[d])); console.log(y); })
+      .each(function(d) { var tem = d3.select(this).call(axis.scale(y[d])); /*console.log(y);*/ })
     .append("svg:text")
       .attr("class", "label")
       .attr("text-anchor", "left")
@@ -110,6 +110,7 @@ d3.csv("./data/crime.csv", function(crime) {
         var lum = ((total[i][1] - totalmin) / totalmax) - 1;
         //console.log(lum);
         $("#seattlemap").find(areaname).css("fill", ColorLuminance("FF6347", lum));
+        $("#seattlemap").find(areaname).attr("total", total[i][1]);
     }
   
 
@@ -119,11 +120,10 @@ d3.csv("./data/crime.csv", function(crime) {
     crime.forEach(function(d){
         var x0 = 0;
         var y0 = 0;
-        d.crimes = colorb.domain().map(function(name) { return {name: name, x0: x0, x1: x0 += +d[name], District: d.District, y0: y0, y1: y0+= +1}; });
+        d.crimes = colorb.domain().map(function(name) { return {name: name, x0: x0, x1: x0 += +d[name], District: d.District, y0: y0, y1: y0+= +1, value: +d[name]}; });
         d.crimes.pop();
         d.total = d.crimes[d.crimes.length - 1].x1;
         xb[d.District] = wb/d.total;
-        //console.log(d);
     });
     //console.log(xb);
 //    xb.domain([0, d3.max(crime, function(d){return d.total;})]);
@@ -141,7 +141,7 @@ d3.csv("./data/crime.csv", function(crime) {
         .attr("class", "g");
 
     state.selectAll("rect")
-        .data(function(d) { return d.crimes; })
+        .data(function(d) { /*console.log(d.crimes);*/return d.crimes; })
         .enter().append("rect")
         .attr("height", hb)
         .attr("x", function(d) { return d.x0*xb[d.District]; })
@@ -158,7 +158,7 @@ d3.csv("./data/crime.csv", function(crime) {
         .attr("class", function(d) { return "label bars " + d.District; })
         .attr("text-anchor", "left")
         .attr("font", "8px")
-        .text(function(d){/*console.log(d);*/ return '-'+d.name;});
+        .text(function(d){/*console.log(d);*/ return '-'+d.name+': '+d.value;});
 /*
     state.append("svg:text")
         .attr("x", function(d) { console.log(d);return d.x0*xb[d.District]; })
