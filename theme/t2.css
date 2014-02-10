@@ -104,13 +104,17 @@ display: block;
 #leftcolumn #controlpanel #localdistrict {
     color: #fff;
     letter-spacing: 0px;
-    font-weight: 700;
-    font-size: 20px;
+    font-weight: 400;
+    font-size: 16px;
     line-height: 20px;
 }
 
 #rightcolumn{
     display: inline-block;
     width: 310px;
+}
+
+.bars.Median {
+opacity: 1;
 }
 

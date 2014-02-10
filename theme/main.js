@@ -22,7 +22,7 @@ $(".area").hover(function(){
     $(districtcode).css("opacity", 0.05);
     $("#seattlemap").find(districtcode).css("opacity", 0.5);
     $("#seattlemap").find(districtcode).css("stroke-width", "0.5px");
-    $("#localdistrict").html("Grand Total");
+    $("#localdistrict").html("Median");
 });
 
 function findvalue(districtname){
