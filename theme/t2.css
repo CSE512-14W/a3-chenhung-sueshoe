@@ -1,39 +1,36 @@
 body {
     background-color: #333;
-color: #fff;
-}
-svg {
-      font: 10px sans-serif;
+    color: #fff;
+    font-family: "Quattrocento Sans", sans-serif;
 }
 
-.background path {
-      fill: none;
-              stroke: #ccc;
-                        stroke-opacity: .4;
-                          shape-rendering: crispEdges;
+
+
+svg {
+      font: 8px;
 }
 
 .foreground path {
-    fill: steelblue;
-    stroke: steelblue;
-}
-
-.brush .extent {
-    fill-opacity: .3;
-    stroke: #fff;
-    shape-rendering: crispEdges;
+    fill: sienna;
+    stroke: tomato;
+    stroke-width: 1px;
 }
 
 .axis line, .axis path {
     fill: none;
     stroke: #fff;
+    stroke-width: 0.5px;
     opacity: 0.5;
 }
 
 .axis text {
     font-size: 8px;
-    stroke: #fff;
-    opacity: 0.5;
+    color: #fff;
+    stroke-width: 0px;
+    opacity: 0.8;
+}
+.axis text.label{
+    font-size: 12px;
 }
 
 .maindisplay{
@@ -45,15 +42,42 @@ svg {
     fill: steelblue;
 }
 
-.part {
-    width: 1120px;
-    display: block;
-    padding: 25px 0;
-}
-.part.top span {
-    display: block;
-    padding-left: 20px;
-    font-size: 20px;
-    letter-spacing: 20px;
+#seattlemap .area{
+    fill: sienna;
 }
 
+#leftcolumn {
+    width: 800px;
+    display: inline-block;
+}
+#leftcolumn span {
+    display: block;
+    padding: 20px 20px 0;
+}
+#leftcolumn #top {
+    font-size: 32px;
+    color: tomato;
+    font-weight: 700;
+    letter-spacing: 4px;
+}
+
+#leftcolumn #top span#date {
+    display:inline;
+    font-size: 16px;
+    color: sienna;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+#leftcolumn #localdistrict {
+    letter-spacing: 0px;
+}
+
+#leftcolumn #controlpanel {
+    height: 180px;
+}
+
+#rightcolumn{
+    display: inline-block;
+    width: 320px;
+}

@@ -7,25 +7,13 @@ cr_main = {
     }
 };
 $(".area").hover(function(){
-    var districtcode = "." + $(this).attr("district");
+    var districtname = $(this).attr("district");
+    var districtcode = "." + districtname;
     $(districtcode).css("opacity", 1);
+    $("#localdistrict").html(districtname);
 }, function(){
-    var districtcode = "." + $(this).attr("district");
+    var districtname = $(this).attr("district");
+    var districtcode = "." + districtname;
     $(districtcode).css("opacity", 0.1);
+    $("#localdistrict").html("Grand Total");
 });
-$("path").hover(function(){
-    var districtcode = "." + $(this).attr("district");
-    $(districtcode).css("opacity", 1);
-}, function(){
-    var districtcode = "." + $(this).attr("district");
-    $(districtcode).css("opacity", 0.1);
-});
-/*
-$(".area").hover(function(){
-    var districtcode = "." + $(this).attr("district");
-    $(districtcode).css("opacity", 1);
-}, function(){
-    var districtcode = "." + $(this).attr("district");
-    $(districtcode).css("opacity", 0.2);
-});
-*/
