@@ -17,7 +17,7 @@ Our visualiation can be accessed by following this link: http://cse512-14w.githu
 
 ##Storyboard 
 We wanted to convey all the different dimensions of crime incident data in a compact visualization and allow quick comparison between neighborhoods, so we choose to plot it onto a parallel coordinates diagram, where the vertical axes represented different types of crime, and each line represented a neighborhood.  We wanted the graph to be linked to a map so that the lines were tied to the neighborhood they represented, and both would highlight if either was moused-over. 
-View the storyboard here: https://github.com/CSE512-14W/a3-chenhung-sueshoe/blob/master/storyboard.png
+View the storyboard here: http://cse512-14w.github.io/a3-chenhung-sueshoe/storyboard.png
 
 ###Changes Between Storyboard and Implementation
 In the final implementation we chose to use a parallel coordinates overlapping area chart because the parallel coordinates diagram is too difficult for viewer to differentiate the lines between different districts. Because the scale of each axes is different, we decided to add a stacked bar to aid in comparing the different types of crime within a single neighborhood. 
