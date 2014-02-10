@@ -1,3 +1,7 @@
+body {
+    background-color: #333;
+color: #fff;
+}
 svg {
       font: 10px sans-serif;
 }
@@ -10,38 +14,35 @@ svg {
 }
 
 .foreground path {
-      fill: none;
-              stroke: steelblue;
-                        stroke-opacity: .7;
+    fill: steelblue;
+    stroke: steelblue;
 }
 
 .brush .extent {
-      fill-opacity: .3;
-        stroke: #fff;
-                  shape-rendering: crispEdges;
+    fill-opacity: .3;
+    stroke: #fff;
+    shape-rendering: crispEdges;
 }
 
 .axis line, .axis path {
-      fill: none;
-              stroke: #000;
-                        shape-rendering: crispEdges;
+    fill: none;
+    stroke: #fff;
+    opacity: 0.5;
 }
 
 .axis text {
-      text-shadow: 0 1px 0 #fff;
-        cursor: move;
-}
-
-.area {
-    opacity: 1;
-}
-
-.area:hover {
+    font-size: 8px;
+    stroke: #fff;
     opacity: 0.5;
 }
 
 .maindisplay{
     display: inline-block;
+}
+
+.area {
+    opacity: 0.1;
+    fill: steelblue;
 }
 
 .part {
@@ -56,6 +57,3 @@ svg {
     letter-spacing: 20px;
 }
 
-.path.area {
-    stroke-width: 3px;
-}
