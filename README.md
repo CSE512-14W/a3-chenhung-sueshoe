@@ -24,7 +24,6 @@ In the final implementation we chose to use a parallel coordinates overlapping a
 
 
 ##Development Process
-Division of work: 
 We used code from http://bl.ocks.org/jasondavies/1341281 as the intial template for how to read in the data and map it to a parallel coordinates diagram. We worked together to develop the intial parallel coordinates diagram.  Chase then did the development for the map, stacked bar, and the front end development, including the styles and interactions between visualizations. 
 
 We spent about 25 hours developing the visualizations. The most time-consuming parts were learning d3, figuring out how to read the data in and map it to the correct visual structure, and linking the visualization. 
