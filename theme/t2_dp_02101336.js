@@ -95,7 +95,7 @@ d3.csv("./data/crime.csv", function(crime) {
   // Add an axis and title.
   g.append("svg:g")
       .attr("class", "axis")
-      .each(function(d) { var tem = d3.select(this).call(axis.scale(y[d])); console.log(y); })
+      .each(function(d) { var tem = d3.select(this).call(axis.scale(y[d])); /*console.log(tem);*/ })
     .append("svg:text")
       .attr("class", "label")
       .attr("text-anchor", "left")
@@ -158,7 +158,7 @@ d3.csv("./data/crime.csv", function(crime) {
         .attr("class", function(d) { return "label bars " + d.District; })
         .attr("text-anchor", "left")
         .attr("font", "8px")
-        .text(function(d){/*console.log(d);*/ return '-'+d.name;});
+        .text(function(d){console.log(d); return '-'+d.name;});
 /*
     state.append("svg:text")
         .attr("x", function(d) { console.log(d);return d.x0*xb[d.District]; })
