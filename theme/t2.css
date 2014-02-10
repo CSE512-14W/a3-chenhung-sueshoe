@@ -2,9 +2,12 @@ body {
     background-color: #222;
     color: #fff;
     font-family: "Quattrocento Sans", sans-serif;
+    overflow: scroll;
 }
 
-
+#outerrow {
+    width: 1120px;
+}
 
 svg {
       font: 8px;
@@ -23,9 +26,12 @@ svg {
     opacity: 0.5;
 }
 
+.axis .tick line{
+display: none;
+}
 .axis text {
     font-size: 8px;
-    color: #fff;
+    fill: #fff;
     stroke-width: 0px;
     opacity: 0.8;
 }
@@ -45,7 +51,7 @@ svg {
 #seattlemap .area{
     fill: sienna;
     stroke:#fff;
-    stroke-width: 1px;
+    stroke-width: 0.5px;
 }
 
 #leftcolumn {
@@ -81,5 +87,6 @@ svg {
 
 #rightcolumn{
     display: inline-block;
-    width: 320px;
+    width: 310px;
 }
+
